@@ -1,0 +1,89 @@
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine("Escribe un numero en hexadecimal: ");
+  bool eshexa = true;
+  string numero = Console.ReadLine(), salida=" ";
+  numero = numero.ToUpper();
+  Console.Write(numero);
+  for(int i=0; i < numero.Length;i++){
+    switch(numero[i]){
+      case  '0': 
+      case  '1': 
+      case  '2': 
+      case  '3':
+      case  '4':
+      case  '5':
+      case  '6':
+      case  '7':
+      case  '8':
+      case  '9':
+      case  'A': 
+      case  'B': 
+      case  'C': 
+      case  'D': 
+      case  'E': 
+      case  'F': break;
+      default: eshexa=false;
+       break;
+    }
+    if(eshexa==false){
+      break;
+    }
+  }
+  if(eshexa==true){
+    for(int i=0; i<numero.Length;i++){
+      switch(numero[i]){
+        case '0':
+        salida+="0000";
+        break;
+        case '1':
+         salida+="0001";
+        break;
+        case '2':
+         salida+="0010";
+        break;
+        case '3':
+         salida+= "0011";
+        break;
+        case '4':
+         salida+= "0100";
+        break;
+        case '5':
+         salida+= "0101"; 
+        break;
+        case '6':
+         salida+= "0110";
+        break;
+        case '7':
+         salida+= "0111";
+        break;
+        case '8':
+         salida+= "1000";
+        break;
+        case '9':
+         salida+= "1001";
+        break;
+        case 'A':
+         salida+= "1010"; 
+        break;
+        case 'B':
+         salida+= "1011";
+        break;
+        case 'C':
+         salida+= "1100"; 
+        break;
+        case 'D':
+         salida+= "1101"; 
+        break;
+        case 'E':
+         salida+= "1110";
+         break;
+        case 'F': 
+          salida+="1111";
+         break;
+      }
+    }
+  }
+  Console.WriteLine(salida);
+  }
+}
